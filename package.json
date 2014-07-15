@@ -4,11 +4,13 @@
   "description": "A smooth scrolling script for the uzbl web browser",
   "main": "bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "./compile"
   },
   "author": "An",
   "license": "MIT",
   "dependencies": {
+    "browserify": "~4.2.1",
     "d3": "^3.4.9",
     "liveify": "^0.4.0"
   }
