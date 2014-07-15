@@ -22,13 +22,19 @@ Edit your config:
     # Smooth scroll by absolute amounts
     @cbind  j = js uzbl.scrollPixels("vertical", 50)
     @cbind  k = js uzbl.scrollPixels("vertical", -50)
-    @cbind  J = js uzbl.scrollPixels("vertical", 20)
-    @cbind  K = js uzbl.scrollPixels("vertical", -20)
-    # Smooth scroll by a percentage of the page
+    @cbind  h = js.uzbl.scrollPixels("horizontal", -50)
+    @cbind  l = js.uzbl.scrollPixels("horizontal", 50)
+    # Smooth scroll by a percentage of the view
     @cbind  <Ctrl>d = js uzbl.scrollPercent("vertical", 50)
     @cbind  <Ctrl>u = js uzbl.scrollPercent("vertical", -50)
     @cbind  <Ctrl>f = js uzbl.scrollPercent("vertical", 100)
     @cbind  <Ctrl>b = js uzbl.scrollPercent("vertical", -100)
+
+## Known bugs
+
+There's occasionally slight horizontal drift when scrolling vertically (or vice
+versa). Maybe WebKit rounds floating point `pageXOffset`/`pageYOffset` values?
+
 
  [npm]: https://www.npmjs.org/ "Node Package Manager"
  [gh-release-tut]: https://github.com/blog/1547-release-your-software

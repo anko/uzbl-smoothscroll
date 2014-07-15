@@ -2,11 +2,24 @@
 require! \d3
 scroll = (direction, amount, absolute=false) !->
   scroll-tween = (offset) ->
-    -> # called for each element
-      i = d3.interpolate-number do
-        window.page-y-offset
-        if absolute then offset else window.page-y-offset + offset
-      (t) -> window.scroll-to 0, i t
+    scroll-tween = switch direction
+    | \vertical =>
+      ->
+        lerp = d3.interpolate-number do
+          window.page-y-offset
+          if absolute then offset else window.page-y-offset + offset
+        (t) -> window.scroll-to do
+          window.page-x-offset
+          lerp t
+    | \horizontal =>
+      ->
+        lerp = d3.interpolate-number do
+          window.page-x-offset
+          if absolute then offset else window.page-x-offset + offset
+        (t) -> window.scroll-to do
+          lerp t
+          window.page-y-offset
+
   d3.transition!
     #.ease \elastic 2 3
     .ease \poly-out 2.5
