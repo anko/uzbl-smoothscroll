@@ -11,6 +11,10 @@ Smooth scrolling script for [`uzbl-browser`][uzbl].
 
 Or just download it from the [release page][release].
 
+Edit your `config` to load on each page:
+
+    @on_event   LOAD_COMMIT    script @scripts_dir/smoothscroll.js
+
 ### Compile from source
 
 You'll need [`npm`][npm], because I'm way too serious about dependency
@@ -20,14 +24,13 @@ management. Basically just `git clone` and run `npm install` in the root dir:
     git clone https://github.com/c39/uzbl-smoothscroll smoothscroll
     npm install
 
-## Use
+Edit your `config` to load it on each page:
 
-Edit your `config` to load it:
-
-    # Load the script on each page
     @on_event   LOAD_COMMIT    script @scripts_dir/smoothscroll/bundle.js
 
-Bind whatever keys you like:
+## Use
+
+Edit your `config` to bind whatever keys you like:
 
     # Smooth scroll by absolute amounts
     @cbind  j = js uzbl.scrollPixels("vertical", 50)
