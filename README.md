@@ -14,10 +14,12 @@ Get it:
     git clone https://github.com/c39/uzbl-smoothscroll smoothscroll
     npm install
 
-Edit your config:
+Edit your config to load it...
 
     # Load the script on each page
     @on_event   LOAD_COMMIT    script @scripts_dir/smoothscroll/bundle.js
+
+...and to bind keys:
 
     # Smooth scroll by absolute amounts
     @cbind  j = js uzbl.scrollPixels("vertical", 50)
@@ -29,6 +31,9 @@ Edit your config:
     @cbind  <Ctrl>u = js uzbl.scrollPercent("vertical", -50)
     @cbind  <Ctrl>f = js uzbl.scrollPercent("vertical", 100)
     @cbind  <Ctrl>b = js uzbl.scrollPercent("vertical", -100)
+    # Smooth scroll by a percentage of the entire page
+    @cbind  gg      = js.uzbl.scrollPercent("vertical", 0)
+    @cbind  G       = js.uzbl.scrollPercent("vertical", 100)
 
 ## Known bugs
 
