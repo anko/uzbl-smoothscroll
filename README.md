@@ -11,10 +11,10 @@ Smooth scrolling script for [`uzbl-browser`][uzbl].
 
 Or just download it from the [release page][release].
 
-### From source
+### Compile from source
 
-You'll need [`npm`][npm], because I'm serious about dependency management.
-Basically just run `npm install` in the root directory.
+You'll need [`npm`][npm], because I'm way too serious about dependency
+management. Basically just `git clone` and run `npm install` in the root dir:
 
     cd "${XDG_CONFIG_HOME:-$HOME/.config}/uzbl/scripts"
     git clone https://github.com/c39/uzbl-smoothscroll smoothscroll
