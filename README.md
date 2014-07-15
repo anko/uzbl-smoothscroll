@@ -1,6 +1,6 @@
 # uzbl-smoothscroll
 
-Smooth scrolling script for uzbl.
+Smooth scrolling script for [`uzbl-browser`][uzbl].
 
 You currently need [`npm`][npm] to compile it, because I'm serious about
 dependency management. (Just-a-plain-JS-file [release][gh-release-tut] coming
@@ -32,3 +32,4 @@ Edit your config:
 
  [npm]: https://www.npmjs.org/ "Node Package Manager"
  [gh-release-tut]: https://github.com/blog/1547-release-your-software
+ [uzbl]: http://www.uzbl.org/
