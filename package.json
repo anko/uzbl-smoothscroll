@@ -1,0 +1,15 @@
+{
+  "name": "uzbl-smoothscroll",
+  "version": "0.0.1",
+  "description": "A smooth scrolling script for the uzbl web browser",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "An",
+  "license": "MIT",
+  "dependencies": {
+    "d3": "^3.4.9",
+    "liveify": "^0.4.0"
+  }
+}
