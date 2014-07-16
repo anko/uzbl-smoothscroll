@@ -45,8 +45,8 @@ Edit your `config` to bind whatever keys you like:
     @cbind  <Ctrl>b = js uzbl.scrollPercent("vertical", -100)
 
     # Smooth scroll by a percentage of the entire page
-    @cbind  gg      = js.uzbl.scrollPercent("vertical", 0)
-    @cbind  G       = js.uzbl.scrollPercent("vertical", 100)
+    @cbind  gg      = js uzbl.scrollPercent("vertical", 0)
+    @cbind  G       = js uzbl.scrollPercent("vertical", 100)
 
 ## Known bugs
 
