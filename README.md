@@ -50,6 +50,8 @@ Edit your `config` to bind whatever keys you like:
 
 ## Known bugs
 
+ - Only works for the keyboard. `uzbl` doesn't let scripts bind to scrollwheel
+   events.
  - Occasionally drifts horizontally a little when scrolling vertically (or vice
    versa). WebKit might be rounding floating point `pageXOffset`/`pageYOffset`
    values?
